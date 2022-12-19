@@ -14,8 +14,6 @@ const { data: friendsRank } = useLazyAsyncData('friendsRank', async () => {
 interface Game {
   name: string
   image: string
-  previous?: string
-  next?: string
 }
 
 const { data: games } = useLazyAsyncData<Game[]>('games', async () => {
@@ -23,6 +21,10 @@ const { data: games } = useLazyAsyncData<Game[]>('games', async () => {
     {
       name: 'Community leaderboard',
       image: 'https://placeimg.com/800/200/arch',
+    },
+    {
+      name: 'Friend leaderboard',
+      image: 'https://placeimg.com/800/200/nature',
     }
   ]
 })
@@ -57,16 +59,22 @@ const { data: games } = useLazyAsyncData<Game[]>('games', async () => {
     </div>
 
     <div class="mt-8">
-      <h1 class="text-lg font-bold">
+      <h1 class="text-xl font-bold">
         Binteractive games
       </h1>
 
-      <div class="carousel w-full h-72">
-        <div :id="game.name" v-for="(game) in games" class="carousel-item relative w-full">
-          <img :src="game.image" class="absolute inset-0 object-cover" />
+      <div v-if="games" class="carousel w-full h-64 mt-3">
+        <div :id="idx.toString()" v-for="(game, idx) in games"
+          class="carousel-item relative w-full rounded-xl overflow-hidden drop-shadow-lg">
+          <img :src="game.image" class="absolute inset-0 object-cover max-w-none h-full" />
+          <div class="bg-black/75 absolute inset-0 p-3">
+            <h2 class="text-2xl text-base-content">
+              {{ game.name }}
+            </h2>
+          </div>
           <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a v-if="game.previous" :href="game.previous" class="btn btn-circle">❮</a>
-            <a v-if="game.next" :href="game.next" class="btn btn-circle">❯</a>
+            <a :href="'#' + (idx > 0 ? idx - 1 : games.length - 1).toString()" class="btn btn-circle btn-sm btn-ghost">❮</a>
+            <a :href="'#' + (idx < games.length - 1 ? idx + 1 : 0).toString()" class="btn btn-circle btn-sm btn-ghost">❯</a>
           </div>
         </div>
       </div>

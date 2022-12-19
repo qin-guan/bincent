@@ -1,6 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'nuxt-icon'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
+    '@vueuse/nuxt',
+    'nuxt-icon',
+  ],
   colorMode: {
     preference: 'pastel', // default theme
     dataValue: 'theme', // activate data-theme in <html> tag

@@ -7,13 +7,7 @@
         </div>
 
         <div class="flex-none">
-          <div class="dropdown dropdown-end">
-            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-              <div class="w-10 rounded-full">
-                <Icon name="material-symbols:account-circle" class="h-10 w-10" />
-              </div>
-            </label>
-          </div>
+          <ButtonLogin />
         </div>
       </div>
     </div>
