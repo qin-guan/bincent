@@ -4,10 +4,14 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "preview": "nuxt preview"
   },
+  "dependencies": {},
   "devDependencies": {
+    "@nuxtjs/color-mode": "^3.2.0",
+    "@nuxtjs/tailwindcss": "^6.2.0",
+    "daisyui": "^2.45.0",
     "nuxt": "3.0.0"
   }
 }
