@@ -46,7 +46,7 @@ const { data: games } = useLazyAsyncData<Game[]>('games', async () => {
         </div>
       </NuxtLink>
 
-      <NuxtLink class="hover:scale-[102%] duration-75">
+      <NuxtLink to="/spend" class="hover:scale-[102%] duration-75">
         <div class="card card-bordered card-compact w-full bg-base-200 text-base-content">
           <div class="card-body">
             <div class="flex justify-between align-center">

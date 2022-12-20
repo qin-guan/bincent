@@ -78,16 +78,3 @@ onMounted(() => {
     <div id="map" class="flex-1 mt-3" />
   </div>
 </template>
-
-<style>
-.marker {
-  background-image: url('./green-bincent.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  ;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-</style>
