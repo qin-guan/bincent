@@ -9,15 +9,25 @@ const auth = useAuth(app.$firebase.auth)
 const points = useFirestore(doc(app.$firebase.firestore, 'points', auth.user.value?.phoneNumber ?? ''))
 
 const normalizedPoints = computed(() => {
-  return points.value ?? 0
+  return points.value ?? 100
 })
 
 const transactions = [
   {
-    name: 'Abc',
+    name: 'Redeem voucher',
     amount: -100
+  },
+  {
+    name: 'Redeem voucher',
+    amount: -200
+  },
+  {
+    name: 'SUTD Library',
+    amount: +500
   }
 ]
+
+
 </script>
 
 <template>
@@ -33,7 +43,7 @@ const transactions = [
           <span class="font-semibold">
             {{ transaction.name }}
           </span>
-          <span>
+          <span :class="{'text-red-500': transaction.amount < 0, 'text-green-500': transaction.amount >= 0}">
             {{ transaction.amount }}
           </span>
         </div>
