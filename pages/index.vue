@@ -35,7 +35,7 @@ const { data: games } = useLazyAsyncData<Game[]>('games', async () => {
     <ThePointsCard :points="points" :friends-rank="friendsRank" :community-rank="communityRank" />
 
     <div class="grid grid-cols-2 gap-2 mt-3">
-      <NuxtLink class="hover:scale-[102%] duration-75">
+      <NuxtLink to="/find" class="hover:scale-[102%] duration-75">
         <div class="card card-bordered card-compact w-full bg-base-200 text-base-content">
           <div class="card-body">
             <div class="flex justify-between align-center">

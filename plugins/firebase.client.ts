@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCoqB2gVYm9B8nEPvvAGp8FHYZ8-uC-10A",
@@ -12,13 +13,17 @@ const firebaseConfig = {
 
 export default defineNuxtPlugin(() => {
   const app = initializeApp(firebaseConfig)
+
   const auth = getAuth(app)
   auth.useDeviceLanguage()
+
+  const firestore = getFirestore(app)
 
   return {
     provide: {
       firebase: {
         auth,
+        firestore
       }
     }
   }

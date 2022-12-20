@@ -29,7 +29,7 @@ const props = defineProps<{
       </div>
 
       <div class="card-actions justify-end">
-        <button class="btn btn-sm">View breakdown</button>
+        <NuxtLink to="/breakdown" class="btn btn-sm">View breakdown</NuxtLink>
       </div>
     </div>
   </div>
