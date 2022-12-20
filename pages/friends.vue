@@ -26,7 +26,7 @@ definePageMeta({
     </div>
 
     <div class="mt-8 flex flex-col gap-4">
-      <div v-for="(_, idx) in new Array(5)" class="card w-full bg-base-200 shadow-xl card-compact">
+      <div v-for="(_, idx) in new Array(5)" class="card w-full bg-base-200 shadow-xl card-compact" :class="idx === 0 ? 'bg-primary' : 'bg-base-200'">
         <div class="card-body">
           <div class="flex justify-between items-center">
             <span class="text-lg font-semibold">
