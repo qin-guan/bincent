@@ -10,15 +10,15 @@
   "dependencies": {},
   "devDependencies": {
     "@nuxtjs/color-mode": "^3.2.0",
-    "@nuxtjs/tailwindcss": "^6.2.0",
-    "@types/mapbox-gl": "^2.7.10",
-    "@vueuse/core": "^9.7.0",
-    "@vueuse/firebase": "^9.7.0",
-    "@vueuse/nuxt": "^9.7.0",
-    "daisyui": "^2.45.0",
-    "firebase": "^9.15.0",
-    "mapbox-gl": "^2.11.1",
-    "nuxt": "3.0.0",
-    "nuxt-icon": "^0.1.8"
+    "@nuxtjs/tailwindcss": "^6.7.2",
+    "@types/mapbox-gl": "^2.7.11",
+    "@vueuse/core": "^10.2.0",
+    "@vueuse/firebase": "^10.2.0",
+    "@vueuse/nuxt": "^10.2.0",
+    "daisyui": "^3.1.1",
+    "firebase": "^9.22.2",
+    "mapbox-gl": "^2.15.0",
+    "nuxt": "3.5.3",
+    "nuxt-icon": "^0.4.1"
   }
 }
